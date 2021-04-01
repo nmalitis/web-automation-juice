@@ -4,7 +4,6 @@ Feature: Juice Shop Actions
     And   I click "Dismiss button"
     And   I click "Me want it button"
 
-  @run
   Scenario: Set items per page
     When I click "Items per page"
     And  I click "Option 24"
@@ -75,6 +74,7 @@ Feature: Juice Shop Actions
     | Pусский     | Заказы и Оплата     | Конфиденциальность и безопасность | Выход         |
     | 日本の       | 注文と支払い          | プライバシーとセキュリテ              |  ログアウト     |
 
+  @run
   Scenario: Increase wallet balance
     When I "create an account" with the following data:
       | Email field  | Password field | Repeat Password field | Security Question | Security Answer field                                |

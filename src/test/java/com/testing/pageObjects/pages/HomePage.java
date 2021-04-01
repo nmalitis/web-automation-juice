@@ -14,19 +14,19 @@ public class HomePage extends TopMenuSection {
   public static By DISMISS_BUTTON = ariaLabel("Close Welcome Banner");
   public static By ME_WANT_IT_BUTTON = ariaLabel("dismiss cookie message");
   public static By ALL_PRODUCTS_TITLE = text("All Products");
-  public static By SIMPLE_SNACK_BAR_PAGE_RELOAD_BUTTON = css("simple-snack-bar button");
+  public static By SIMPLE_SNACK_BAR_PAGE_RELOAD_BUTTON = css("simple-snack-bar[class='mat-simple-snackbar ng-star-inserted']>button");
   public static By SIMPLE_SNACK_BAR = css("simple-snack-bar span");
-  public static By ITEMS_PER_PAGE;
-  public static By OPTION_24;
-  public static By BLOCK_NAME;
+  public static By ITEMS_PER_PAGE = css("mat-select[id^='mat-select-']");
+  public static By OPTION_24 = css ("mat-option[id=mat-option-1]");
+  public static By BLOCK_NAME = css ("div.item-name");
   public static By ADD_TO_BASKET_BUTTON;
-  public static By PRODUCT_INFO_BLOCK;
-  public static By PRODUCT_INFO_PRICE;
-  public static By PRODUCT_INFO_CLOSE;
-  public static By REVIEWS_EXPAND;
-  public static By COMMENT_SECTION;
-  public static By REVIEW_TEXT_FIELD;
-  public static By SUBMIT_BUTTON;
+  public static By PRODUCT_INFO_BLOCK = css ("mat-dialog-content[class='mat-dialog-content']");
+  public static By PRODUCT_INFO_PRICE = css ("p[class='item-price']");
+  public static By PRODUCT_INFO_CLOSE = css ("button[class='mat-focus-indicator close-dialog buttons mat-stroked-button mat-button-base']");
+  public static By REVIEWS_EXPAND = css ("mat-expansion-panel-header[id='mat-expansion-panel-header-0']");
+  public static By COMMENT_SECTION = css("div[class^='mat-expansion-panel-body']");
+  public static By REVIEW_TEXT_FIELD = css("textarea[id^='mat-input-']");
+  public static By SUBMIT_BUTTON = css("button[id='submitButton']");
 
   // Public methods ----------------------------------------------------------------------------------------------------
   public void waitForPageToLoad() {
