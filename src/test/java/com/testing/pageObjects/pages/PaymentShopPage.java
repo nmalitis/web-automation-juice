@@ -17,10 +17,10 @@ public class PaymentShopPage extends DeliveryMethodPage{
   public static By MY_PAYMENT_OPTIONS_TITLE = text("My Payment Options");
   public static By CONTINUE_BUTTON = css ("button[aria-label='Proceed to review']");
   public static By ADD_NEW_CARD_OPTION = css ("mat-expansion-panel-header[id='mat-expansion-panel-header-0']");
-  public static By CARD_NAME_FIELD = css ("input[id='mat-input-2']");
-  public static By CARD_NUMBER_FIELD = css ("input[id='mat-input-3']");
-  public static By EXPIRY_MONTH_FIELD = css ("select[id='mat-input-4']");
-  public static By EXPIRY_YEAR_FIELD = css ("select[id='mat-input-5']");
+  public static By CARD_NAME_FIELD = css ("div>mat-form-field>div>div>div>input[id^='mat-input'][type='text']");
+  public static By CARD_NUMBER_FIELD = css ("input[id^='mat-input'][type='number']");
+  public static By EXPIRY_MONTH_FIELD = By.xpath("//div/mat-form-field[3]");
+  public static By EXPIRY_YEAR_FIELD = By.xpath("//div/mat-form-field[4]");
   // Public methods
   // -------------------------------------------------------------------------------------------------------------------
   public void waitForPageToLoad(){

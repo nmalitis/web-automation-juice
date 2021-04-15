@@ -30,7 +30,7 @@ Feature: Juice Shop Actions
   Scenario: Add comment
     When I "log in" with the following data:
       | Email | Password |
-      | demo  | demo     |
+      | demo  | demo1     |
     And  I search for "2020"
     And  I "open item" with the following data:
       | Name                                 |
@@ -58,7 +58,7 @@ Feature: Juice Shop Actions
   Scenario Outline: Change language
     When I "log in" with the following data:
       | Email | Password |
-      | demo  | demo     |
+      | demo  | demo1     |
     And  I "Select language" with the following data:
       | Language   |
       | <Language> |
@@ -74,7 +74,7 @@ Feature: Juice Shop Actions
     | Pусский     | Заказы и Оплата     | Конфиденциальность и безопасность | Выход         |
     | 日本の       | 注文と支払い          | プライバシーとセキュリテ              |  ログアウト     |
 
-  @run
+
   Scenario: Increase wallet balance
     When I "create an account" with the following data:
       | Email field  | Password field | Repeat Password field | Security Question | Security Answer field                                |
@@ -123,10 +123,11 @@ Feature: Juice Shop Actions
     | RANDOM_EMAIL | SeriousHeadAche |
   Then I am on the "Home" page
 
+
   Scenario: Add new address
     When I "log in" with the following data:
       | Email | Password |
-      | demo  | demo     |
+      | demo  | demo1     |
     And  I search for "Apple Juice"
     And  I click "Add to basket button"
     And  I click "Shopping cart button"
@@ -144,10 +145,11 @@ Feature: Juice Shop Actions
       | Name    | Address               | Country |
       | Karlson | Random Address 25-395 | Sweden  |
 
+  @run
   Scenario: Order an item
     When I "log in" with the following data:
       | Email | Password |
-      | demo  | demo     |
+      | demo  | demo1     |
     And I search for "Apple Juice"
     And  I click "Add to basket button"
     And  I click "Shopping cart button"
