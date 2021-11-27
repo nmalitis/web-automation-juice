@@ -22,7 +22,7 @@ public class DeliveryMethodPage extends AddressSelectPage {
     getElement(DELIVERY_SPEED_TITLE).waitUntilVisible();
     logWeAreOnPage();
   }
-
+// random comment
   public void performSelectDeliverySpeed(DataTable data){
     String deliverySpeed = null;;
     Boolean found = null;;
